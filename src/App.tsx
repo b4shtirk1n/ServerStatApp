@@ -52,7 +52,7 @@ export default function App() {
         ))}
 
         <iframe
-          src="http://213.171.24.78:8100"
+          src="https://streamuse.app/bluemap"
           style={{
             width: "80vh",
             height: "80vh",
