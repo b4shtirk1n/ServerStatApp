@@ -5,6 +5,7 @@ interface Player {
   name: string;
   uuid: string;
   skin: string;
+  health: number;
   x: number;
   y: number;
   z: number;
@@ -34,10 +35,11 @@ export default function App() {
         {players.map((p) => (
           <div key={p.uuid}>
             <img
-              src={`https://crafatar.com/avatars/${p.uuid.replace(/-/g, "")}?size=48`}
+              src={`https://i.pinimg.com/474x/64/3d/67/643d67ff020ca8b411001a6b31f5c149.jpg`}
               alt={p.name}
             />
             <span>{p.name}</span>
+            {/* <span>{p.health}</span> */}
           </div>
         ))}
       </div>
