@@ -6,12 +6,4 @@ import babel from "@rolldown/plugin-babel";
 export default defineConfig({
   plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
   base: "/stat/",
-  server: {
-    proxy: {
-      "/api": {
-        target: "http://localhost:9090",
-        changeOrigin: true,
-      },
-    },
-  },
 });
