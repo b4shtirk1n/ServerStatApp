@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 export default function App() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [server, setServer] = useState<Server | null>(null);
   const [players, setPlayers] = useState<Player[]>([]);
 
@@ -16,9 +15,11 @@ export default function App() {
     const id = setInterval(() => {
       loadServer();
       loadPlayers();
+      console.log(server);
     }, 3000);
 
     return () => clearInterval(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function loadServer() {
