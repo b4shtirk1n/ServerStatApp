@@ -35,6 +35,7 @@ export default function App() {
         {players.map((p) => (
           <div key={p.uuid}>
             <img
+              width={48}
               src={`https://i.pinimg.com/474x/64/3d/67/643d67ff020ca8b411001a6b31f5c149.jpg`}
               alt={p.name}
             />
