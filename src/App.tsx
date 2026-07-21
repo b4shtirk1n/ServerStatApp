@@ -34,11 +34,14 @@ export default function App() {
 
   return (
     <>
-      <div>
-        <h2>Игроки онлайн ({players.length})</h2>
+      <h2>Игроки онлайн ({players.length})</h2>
 
+      <div style={{ display: "flex", justifyContent: "center" }}>
         {players.map((p) => (
-          <div key={p.uuid}>
+          <div
+            key={p.uuid}
+            style={{ display: "flex", gap: 20, justifyContent: "center" }}
+          >
             <img
               width={48}
               src={`https://i.pinimg.com/474x/64/3d/67/643d67ff020ca8b411001a6b31f5c149.jpg`}
@@ -47,19 +50,21 @@ export default function App() {
             <div>
               <p>{p.name}</p>
             </div>
-            <p>Ping: {p.ping}</p>
+            <p style={{ display: "flex", justifyContent: "center" }}>
+              Ping: {p.ping}
+            </p>
           </div>
         ))}
-
-        <iframe
-          src="https://streamuse.app/bluemap"
-          style={{
-            width: "80vh",
-            height: "80vh",
-            border: "none",
-          }}
-        />
       </div>
+
+      <iframe
+        src="https://streamuse.app/bluemap"
+        style={{
+          width: "80vh",
+          height: "80vh",
+          border: "none",
+        }}
+      />
     </>
   );
 }
