@@ -1,17 +1,11 @@
 export interface Server {
-  name: string;
-  version: string;
-  online: number;
+  onlinePlayers: number;
   maxPlayers: number;
-  tps: number;
-  mspt: number;
   motd: string;
-  weather: {
-    raining: boolean;
-    thundering: boolean;
-  };
-  time: {
-    day: number;
-    dayTime: number;
-  };
+  isRunning: boolean;
+  difficulty: string;
+  dayTime: number;
+  raining: boolean;
+  thundering: boolean;
+  tps: number;
 }
