@@ -36,11 +36,11 @@ export default function App() {
     <>
       <h2>Игроки онлайн ({players.length})</h2>
 
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         {players.map((p) => (
           <div
             key={p.uuid}
-            style={{ display: "flex", gap: 20, justifyContent: "center" }}
+            style={{ display: "flex", gap: 20, alignItems: "center" }}
           >
             <img
               width={48}
