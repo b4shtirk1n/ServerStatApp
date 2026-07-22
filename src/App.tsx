@@ -68,21 +68,26 @@ export default function App() {
 
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           <h2>Топ по отключению от сервера ({players.length})</h2>
-          {leaderboard.map((p) => (
-            <div
-              key={p.uuid}
-              style={{ display: "flex", gap: 20, alignItems: "center" }}
-            >
-              <img
-                width={48}
-                src={`https://i.pinimg.com/474x/64/3d/67/643d67ff020ca8b411001a6b31f5c149.jpg`}
-                alt={p.name}
-              />
-              <div>
-                <p>{p.name}</p>
+          {leaderboard
+            .sort((a, b) => a.leaveCount - b.leaveCount)
+            .map((p) => (
+              <div
+                key={p.uuid}
+                style={{ display: "flex", gap: 20, alignItems: "center" }}
+              >
+                <img
+                  width={48}
+                  src={`https://i.pinimg.com/474x/64/3d/67/643d67ff020ca8b411001a6b31f5c149.jpg`}
+                  alt={p.name}
+                />
+                <div>
+                  <p>{p.name}</p>
+                </div>
+                <p style={{ display: "flex", justifyContent: "center" }}>
+                  {p.leaveCount}
+                </p>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
 
