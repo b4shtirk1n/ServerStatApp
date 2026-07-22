@@ -49,15 +49,22 @@ export default function App() {
           {players.map((p) => (
             <div
               key={p.uuid}
-              style={{ display: "flex", gap: 20, alignItems: "center" }}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 20,
+              }}
             >
-              <img
-                width={48}
-                src={`https://i.pinimg.com/474x/64/3d/67/643d67ff020ca8b411001a6b31f5c149.jpg`}
-                alt={p.name}
-              />
               <div>
-                <p>{p.name}</p>
+                <img
+                  width={48}
+                  src={`https://i.pinimg.com/474x/64/3d/67/643d67ff020ca8b411001a6b31f5c149.jpg`}
+                  alt={p.name}
+                />
+                <div>
+                  <p>{p.name}</p>
+                </div>
               </div>
               <p style={{ display: "flex", justifyContent: "center" }}>
                 Ping: {p.ping}
@@ -74,15 +81,22 @@ export default function App() {
             .map((p) => (
               <div
                 key={p.uuid}
-                style={{ display: "flex", gap: 20, alignItems: "center" }}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: 20,
+                }}
               >
-                <img
-                  width={48}
-                  src={`https://i.pinimg.com/474x/64/3d/67/643d67ff020ca8b411001a6b31f5c149.jpg`}
-                  alt={p.name}
-                />
                 <div>
-                  <p>{p.name}</p>
+                  <img
+                    width={48}
+                    src={`https://i.pinimg.com/474x/64/3d/67/643d67ff020ca8b411001a6b31f5c149.jpg`}
+                    alt={p.name}
+                  />
+                  <div>
+                    <p>{p.name}</p>
+                  </div>
                 </div>
                 <p style={{ display: "flex", justifyContent: "center" }}>
                   {p.leaveCount}
