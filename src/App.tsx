@@ -43,7 +43,7 @@ export default function App() {
 
   return (
     <>
-      <div style={{ display: "flex", flexDirection: "row", gap: 10 }}>
+      <div style={{ display: "flex", flexDirection: "row", gap: 20 }}>
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           <h2>Игроки онлайн ({players.length})</h2>
           {players.map((p) => (
@@ -67,10 +67,10 @@ export default function App() {
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          <h2>Топ по отключению от сервера (5)</h2>
-          {leaderboard
+          <h2>Топ по отключению от сервера</h2>
+          {[...leaderboard]
             .sort((a, b) => b.leaveCount - a.leaveCount)
-            .slice(0, 5)
+            .slice(0, 1)
             .map((p) => (
               <div
                 key={p.uuid}
