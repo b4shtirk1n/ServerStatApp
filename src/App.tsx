@@ -56,7 +56,7 @@ export default function App() {
                 gap: 20,
               }}
             >
-              <div>
+              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <img
                   width={48}
                   src={`https://i.pinimg.com/474x/64/3d/67/643d67ff020ca8b411001a6b31f5c149.jpg`}
@@ -88,7 +88,7 @@ export default function App() {
                   gap: 20,
                 }}
               >
-                <div>
+                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                   <img
                     width={48}
                     src={`https://i.pinimg.com/474x/64/3d/67/643d67ff020ca8b411001a6b31f5c149.jpg`}
