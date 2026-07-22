@@ -97,6 +97,7 @@ export default function App() {
           width: "80vh",
           height: "80vh",
           border: "none",
+          flexShrink: 0,
         }}
       />
     </>
