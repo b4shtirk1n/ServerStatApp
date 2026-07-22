@@ -1,0 +1,21 @@
+.stats {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  @media (min-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.map {
+  width: 80vh;
+  height: 80vh;
+  border: none;
+  flex-shrink: 0;
+
+  @media (min-width: 600px) {
+    width: 40vh;
+    height: 60vh;
+  }
+}

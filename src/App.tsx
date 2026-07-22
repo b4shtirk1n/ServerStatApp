@@ -43,7 +43,7 @@ export default function App() {
 
   return (
     <>
-      <div style={{ display: "flex", flexDirection: "row", gap: 20 }}>
+      <div className="stats">
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           <h2>Игроки онлайн ({players.length})</h2>
           {players.map((p) => (
@@ -106,15 +106,7 @@ export default function App() {
         </div>
       </div>
 
-      <iframe
-        src="https://streamuse.app/bluemap"
-        style={{
-          width: "80vh",
-          height: "80vh",
-          border: "none",
-          flexShrink: 0,
-        }}
-      />
+      <iframe className="map" src="https://streamuse.app/bluemap" />
     </>
   );
 }
