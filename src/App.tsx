@@ -67,9 +67,10 @@ export default function App() {
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          <h2>Топ по отключению от сервера ({players.length})</h2>
+          <h2>Топ по отключению от сервера (5)</h2>
           {leaderboard
             .sort((a, b) => b.leaveCount - a.leaveCount)
+            .slice(0, 5)
             .map((p) => (
               <div
                 key={p.uuid}
